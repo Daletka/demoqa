@@ -26,3 +26,8 @@ class WebElements:
 
     def get_text(self):
         return str(self.find_element().text)
+
+
+    def visbl(self):
+        return self.find_element().is_displayed()
+
