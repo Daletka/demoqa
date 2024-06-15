@@ -10,6 +10,9 @@ class WebElements:
     def find_element(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
 
+    def find_elements(self):
+        return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
+
     def find_xpath(self):
         return self.driver.find_element(By.XPATH, self.locator)
 
@@ -23,11 +26,17 @@ class WebElements:
             return False
         return True
 
-
     def get_text(self):
         return str(self.find_element().text)
-
 
     def visbl(self):
         return self.find_element().is_displayed()
 
+    def check_count_elements(self, count: int):
+        if len(self.find_elements()) == count:
+            return True
+        return False
+
+    def send_keys(self, text: str):
+        self.find_element().send_keys(text)
+        
