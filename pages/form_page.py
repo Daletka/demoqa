@@ -20,5 +20,5 @@ class FormPage(BasePage):
         self.hobby_read = WebElements(driver,"#hobbies-checkbox-2")
         self.hobby_music = WebElements(driver,"#hobbies-checkbox-3")
         self.address = WebElements(driver, "#currentAddress")
-        self.state = WebElements(driver, "#state > div > div:nth-child(1) >div:nth-child(1)")
+        self.state = WebElements(driver, "#firstName")
         self.user_form = WebElements(driver, "#userForm")
