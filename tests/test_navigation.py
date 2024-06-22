@@ -8,7 +8,7 @@ def test_navigation(browser):
 
     demo.visit()
 
-    demo.btn_elements.clck()
+    demo.btn_elements.click()
 
     elements.refresh()
     browser.refresh()

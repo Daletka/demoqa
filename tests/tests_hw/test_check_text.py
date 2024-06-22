@@ -12,7 +12,7 @@ def test_check_footer(browser):
 def test_check_title(browser):
     elem_page = DemoQa(browser)
     elem_page.visit()
-    elem_page.btn_elements.clck()
+    elem_page.btn_elements.click()
     assert elem_page.title.get_text() == 'Please select an item from left to start practice.'
 
 def test_page_elements(browser):

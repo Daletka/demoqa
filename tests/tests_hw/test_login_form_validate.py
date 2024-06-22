@@ -11,6 +11,6 @@ def test_login_form_validate(browser):
     assert login.user_email.get_dom_attribute("placeholder") == "name@example.com"
     assert login.user_email.get_dom_attribute("pattern") == r"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
     time.sleep(2)
-    login.btn_submit.clck_force()
+    login.btn_submit.click_force()
     time.sleep(3)
     assert login.user_form.get_dom_attribute("class") == "was-validated"

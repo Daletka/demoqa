@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 
-class WebElements:
+class WebElement:
     def __init__(self, driver, locator="", locator_type='css'):
         self.driver = driver
         self.locator = locator
@@ -18,10 +18,10 @@ class WebElements:
     def find_xpath(self):
         return self.driver.find_element(By.XPATH, self.locator)
 
-    def clck(self):
+    def click(self):
         self.find_element().click()
 
-    def clck_force(self):
+    def click_force(self):
         self.driver.execute_script("arguments[0].click()", self.find_element())
 
     def exist(self):
@@ -34,7 +34,7 @@ class WebElements:
     def get_text(self):
         return str(self.find_element().text)
 
-    def visbl(self):
+    def visibl(self):
         return self.find_element().is_displayed()
 
     def check_count_elements(self, count: int):
@@ -77,6 +77,6 @@ class WebElements:
 
     def scroll_to_element(self):
         self.driver.execute_script(
-            "windows.scrollTo(0, document.body.scrollHeight);",
+            "window.scrollTo(0, document.body.scrollHeight);",
             self.find_element()
         )

@@ -17,7 +17,7 @@ def test_navigation_modal(browser):
 
     time.sleep(2)
 
-    modal.icon.clck()
+    modal.icon.click()
     time.sleep(2)
     browser.back()
     time.sleep(2)
