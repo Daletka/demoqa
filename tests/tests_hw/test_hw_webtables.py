@@ -8,6 +8,7 @@ def test_webtables(browser):
     webtables.visit()
     assert webtables.btn_add.exist()
     webtables.btn_add.click()
+    time.sleep(2)
     assert webtables.modal.exist()
     webtables.btn_submit.click()
     assert webtables.user_form.get_dom_attribute('class') == "was-validated"
@@ -17,16 +18,20 @@ def test_webtables(browser):
     webtables.age.send_keys('30')
     webtables.salary.send_keys('50000')
     webtables.depart.send_keys("Legal")
+    time.sleep(2)
     webtables.btn_submit.click()
     assert not webtables.modal.exist()
     assert webtables.new_row.exist()
     webtables.btn_edit.click()
+    time.sleep(2)
     assert webtables.modal.exist()
     webtables.first_name.clear()
     webtables.first_name.send_keys("Test")
     webtables.btn_submit.click()
+    time.sleep(2)
     assert webtables.new_name.exist()
     webtables.btn_del.click()
+    time.sleep(2)
     assert not webtables.new_name.exist()
 
 def test_next_previous(browser):
