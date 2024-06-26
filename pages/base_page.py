@@ -1,6 +1,7 @@
 import logging
 from components.components import WebElement
 
+
 class BasePage:
 
     def __init__(self, driver, base_url):
